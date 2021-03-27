@@ -1,0 +1,355 @@
+/* styles.css */
+
+/* Goal 1: CSS Selectors */
+
+.class-selector{
+	text-align: right;
+}
+
+#id-selector{
+	text-align: center;
+}
+/* Goal 2: CSS Colors */
+/*background colors*/
+.bg-white{
+	background-color: rgb(255,255,255);
+}
+.bg-green{
+	background-color: rgb(0,255,0);
+}
+.bg-greenlaurel{
+	background-color: rgb(181, 201, 154);
+}
+.bg-blue{
+	background-color: rgb(0,0,255);
+}
+.bg-dark{
+	background-color: rgb(0,0,0);
+}
+
+.bg-overlay{
+	background-color: rgba(255, 255, 255, 0.85);
+}
+
+.bg-cream{
+	background-color: rgb(250, 237, 205);
+}
+
+
+/*Font Colors*/
+.text-red{
+	color: red;
+}
+.text-blue{
+	color: blue;
+}
+.text-green{
+	color: green;
+}
+.text-white{
+	color: white;
+}
+
+.text-orange{
+	color: rgb(198,87,41);
+}
+
+h1, h2, h3, h4, h5, p, a {
+    font-family: 'Quicksand', sans-serif;
+    font-variant: small-caps;
+}
+
+
+/* Goal 3: CSS Fonts */
+/* Font properties*/
+.bold{
+	font-weight: bold;
+}
+.italic{
+	font-style: italic;
+}
+.large-text{
+	font-size: 22px;
+}
+
+.small-text{
+	font-size: small;
+}
+
+/*font families*/
+
+.arial-font{
+	font-family: 'Arial';
+}
+.bangers-font{
+	font-family: 'Bangers';
+}
+
+/* Goal 4: CSS Spacing */
+.outline{
+	outline-width: 3px;
+	outline-style: solid;
+	outline-color: rgb(198, 125, 15);
+}
+
+.border{
+	border-width: 3px;
+	border-style: solid;
+	border-color: rgb(198, 125, 15);
+}
+
+.padding{
+	padding: 20px;
+}
+
+.margin{
+	margin: 20px;
+}
+
+.container{
+	width: 90%;
+	margin: auto;
+}
+
+/* Goal 5: CSS Sizing */
+
+.force-full-viewport{
+	width: 100%;
+	height: 100%;
+}
+
+.shrink-to-viewport{
+	max-width: 100%
+	max-height: 100%;
+}
+/* Goal 6: CSS Backgrounds */
+
+.background-image{
+	background-image: url('../assets/bg-image.jpg');
+}
+
+.background-image-without-repeat{
+	background-image: url('../assets/bg-image.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.background-image-fixed{
+	background-image: url('../assets/bg-image.jpg');
+	background-attachment: fixed;
+}
+
+.background-gradient{
+	background-image: linear-gradient(black, gray);
+}
+
+
+/* Goal 7: CSS Customizations (to Default HTML Styles) */
+
+a {
+	text-decoration: none;
+}
+
+a:hover{
+	color: red;
+}
+
+button:hover{
+	background-color: red;
+}
+
+ul{
+	list-style-image: url('../assets/list-item-image.png');
+	list-style-position: inside;
+}
+
+table{
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th, td{
+	text-align: center;
+	padding: 5px;
+}
+
+tr:nth-child(even){
+	background-color: white;
+}
+
+tr:nth-child(odd){
+	background-color: silver;
+}
+
+th{
+	background-color: green;
+	color: white;
+}
+
+
+/* Goal 8: CSS Aligning with Flexbox */
+
+.center{
+	display: flex;
+	justify-content: center;
+}
+
+.left{
+	display: flex;
+	justify-content: flex-start;
+}
+
+.right{
+	display: flex;
+	justify-content: flex-end;
+}
+
+.justify-space-between{
+	display: flex;
+	justify-content: space-between;
+}
+
+.justify-space-around{
+	display: flex;
+	justify-content: space-around;
+}
+
+.justify-space-evenly{
+	display: flex;
+	justify-content: space-evenly;
+}
+
+
+
+
+/* Goal 9: CSS Aligning with Gridview */
+
+.grid-1col{
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: auto;
+	justify-items: center;
+}
+
+.grid-2col{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: auto;
+	justify-items: center;
+}
+
+.grid-3col{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto;
+	justify-items: center;
+}
+
+
+
+.overlay {
+    min-width: 400px;
+    max-width: 40%;
+    padding: 20px 0px 40px 0px;
+    background-color: rgba(255, 255, 255, 0.85);
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px 0 rgba(0,0,0,1);
+    border-radius: 2px;
+}
+
+.flex {
+    display: flex;
+}
+
+.col {
+    flex-direction: column;
+}
+
+
+/* Text on Image */
+
+/* Container holding the image and the text */
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+  width: 100%;
+  padding: 100px 50px;
+}
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* HOVER */
+a:hover {
+    font-size: 1.23em;
+}
+
+i:hover, .nav-link:hover, i:visited {
+    color: #5893d4;
+}
+
+@keyframes tilt {
+  0% {transform: rotate(0deg);}
+  50% {transform: rotate(-2deg);}
+  75% {transform: rotate(2deg);}
+  100% {transform: rotate(0deg);}
+}
+
+.tilt:hover {
+  animation:tilt 2s ease alternate infinite;
+}
+
+}
+
+
+
+/* Hero Source https://gist.github.com/adamdehaven/dceabb07450295fec6fc#file-bgimage-html */
+
+.bgimage {
+  width:100%;
+  height:500px;
+  background: url('bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;
+  background-attachment: fixed;
+}
+.bgimage h5 {
+  color:white;
+  text-shadow:2px 2px #333;
+}
