@@ -1,7 +1,7 @@
 <html>
     <head>
         <link rel="icon" href="../assets/icon.png">
-        <title>Your Name</title>
+        <title>Huong Nguyen</title>
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,9 +13,53 @@
     <body>
 
         <div class='container'>
-            <h1 class='display-1 mt-4'> Algorithms </h1>
-            <p> 123 ABC</p>
+            <h1 class='display-1 mt-4'> Javascript and DOM Browser App </h1>
             <hr>
+        </div>
+
+        <div>
+            <img src='browser.png' style="width:80%;">
+            <p> I chose to create a random winner generator as my browser app utilizing Javascript and DOM (and HTML) as shown in the image above. </p>
+
+            <p> In script.js, we start by declaring variables that we want to manipulate using Javascript. We are able to do this by using the id relation established in index.html. For example, we are able to manipulate the 'Select Winner' button in the Javascript file by assigning its variable as: </p>
+
+            <code>
+            var button = document.getElementById("button");
+            </code>
+
+            <p> Below is the list of variables established above script.js. It also includes arrays that we will utilize to select a random name and background.</p>
+
+            <img src='vars.png' style="width:80%;">
+
+            <h3> addEventListener</h3>
+            <p> When we click on 'Submit Name', we want to add these names to be included in the list that the winner is retrieved from. When we click on 'Select Winner' we want a winner to be chosen from that list. Lastly, when we click on the background, we want it to change. All of this is made possible by adding an event listener to each one like the example below: </p>
+
+
+            <code>
+                banners.addEventListener("click", changeBg);
+            </code>
+            
+            <p> Now, when the banner, or background of the winner announcement is clicked, it will invoke the <code>changeBg</code> function as shown below.</p>
+
+            <img src='changeBg.png' style="width:80%;">
+            <img src='changed.png' style="width:80%;">
+
+            <h3> addNames</h3>
+            <img src='addNames.png' style="width:80%;">
+            <p> This function is invoked by <code>addName.addEventListener("click", addNames);. </code> </p>
+            <p> If the input value is more than 1, in other words, is not empty, we take the input and push it into names, the array that we've declared early in the script. After, the line, <code> document.querySelector('form').reset(); </code> resets the form so additional names can be added. We then include this list into local storage using set item.</p>
+
+            <p>Screenshot of local storage when names are submitted:</p>
+            <img src='namesList.png' style="width:80%;">
+
+            <h3> Select Winner </h3>
+            <img src='selectWinner.png' style="width:80%;">
+            <p> Last, we adjust our script file to show us the winner from the given list. Here, we attach <code>addEventListener</code> to our button to do so upon being clicked. This is done similarly to the previous two examples usng Event Listener, but the function is directly passed in it. If the user does not submit any names, nothing changed and the user is notified. Otherwise, the names are listed and the before variable (that holds the placeholder of "Winner is...") is changed to an empty string to make room from the result. The winner is chosen randomly using (the same way we chose random backgrounds): <code>var rando = names[Math.floor(Math.random()*names.length)]; </code> Answer's innerText is now rando, the variable that will select random name from the names array.</p>
+
+            <h3> End Result: </h3>
+            <img src='winner.png' style="width:80%;">
+
+
         </div>
 
         <!--  Bootstrap Bundle with Popper -->
