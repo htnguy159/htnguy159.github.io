@@ -1,21 +1,187 @@
 <html>
     <head>
         <link rel="icon" href="../assets/icon.png">
-        <title>Your Name</title>
+        <title>Huong Nguyen</title>
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="../styles/bootstrap.min.css">
-        <link rel="stylesheet" href="../styles/bootstrap-icons.css">
+
     </head>
     <body>
 
         <div class='container'>
-            <h1 class='display-1 mt-4'> GitHub Tutorial </h1>
-            <p> Hopefully not.</p>
+            <h1 class='display-1 mt-4'> Project Specifications: Budget Web App </h1>
             <hr>
+        </div>
+
+        <div>
+            <img src='specifics.jpg' style="width:80%;">
+            <h2> Full Stack Web App: Budgeting App </h2>
+            <p> For my current project, I am developing a Budgeting Web App with my teammate, Phuong-Anh. </p>
+
+            <h4> Our goal is to keep track of user expenses and provide monthly reports to show spending habits.</h4>
+
+            <h2> In order to do this we need a solid plan. </h2>
+            <p> In this article, I've included all of our specifications that we've decided to include in our project that you can look forward to!</p>
+            <ul>
+                <li>User Stories</li>
+                <li>Front End Features</li>
+                <li>Backend Features</li>
+                <li>Database Features</li>
+            </ul>
+
+            <hr>
+
+            <h2> User Stories </h2>
+            <ul>
+                <h4>Regular User</h4>
+                <li>Sign Up</li>
+                <li>Log In</li>
+                <li>Add an Expense</li>
+                <li>View All Submitted Expenses</li>
+                <li>View Monthly Category Pie Chart</li>
+                <li>View Monthly Total Spending Bar Graph</li>
+                <li>View Remaining Budget Balance</li>
+                <li>Log Out</li>
+            
+                <h4>Guest User</h4>
+                <li>Sign Up</li>
+                <li>Log In</li>
+                <li>Add an Expense</li>
+                <li>View All Submitted Expenses</li>
+                <li>View Monthly Category Pie Chart</li>
+                <li>View Monthly Total Spending Bar Graph</li>
+                <li>View Remaining Budget Balance</li>
+                <li>Log Out</li>
+                
+            </ul>
+
+            <hr>
+
+            <h2> Frontend Features </h2>
+            <ul>
+                <h4>Index</h4>
+
+                    <li>Sign Up View - User Input:</li>
+
+                        <ul>
+                            <li>Form to sign up</li>
+                            <ul>
+                                <li>Email</li>
+                                <li>Name</li>
+                                <li>Password</li>     
+                            </ul>
+                            <li> Submit Button for Sign Up</li>
+                            <li> Link to login under form (for established users)</li>
+                        </ul>
+
+                    <li>Login View - User Input:</li>
+
+                        <ul>
+                            <li>Form to Login</li>
+                            <ul>
+                                <li>Email</li>
+                                <li>Password</li>     
+                            </ul>
+                            <li> Submit Button for Sign Up</li>
+                        </ul>
+
+                <h4>General View (Once Logged In)</h4>
+
+                    <li>User Input:</li>
+
+                        <ul>
+                            <li>Adding an Expense</li>
+                            <ul>
+                                <li>Title</li>
+                                <li>Category (Drop down menu)</li>
+                                <li>Date</li>
+                                <li>Amount</li>
+                                <li> Submit Button for Add Expense</li>
+                            </ul>
+                            
+                        </ul>
+
+                    <li>Chart/List detailing the expenses for the current month</li>
+                    <li>Pie chart detailing the amount for each expense category of the current month (EX: Savings: 15%, Personal 50%, Fees: 5%, Transportation 15%, Education: 15%) </li>
+                    <li>Bar graph of previous months detailing the total amount spent in a month</li>
+                    <li>Display of remaining budget balance: Monthly income - total amount spent</li>
+                    <li>Log out option at top right screen</li>
+
+                
+                <hr>
+
+                <h2>Backend Features</h2>
+                    <li>Establish User Sign Up</li>
+                    <li>Authenticate User</li>
+                    <li>Updates chart/list</li>
+                        <ul>
+                            <li>Takes the user’s input and converts it to show in the chart as a list</li>
+                            <li>Notify user that new expense has been successfully submitted</li>
+                        </ul>
+                    <li>Calculates percentages of each category with the given user input</li>
+                    <li>Updates pie chart</li>
+                        <ul>
+                            <li>Converts user’s input to give a visual of how much each category is in relation to the other categories (based on the percentages)</li>
+                        </ul>
+                    <li>Calculates the remaining budget balance</li>
+                    <li>Calculates the total amount spent for each month</li>
+                    <li>Updates bar graph</li>
+                        <ul>
+                            <li>Uses the calculated total amount spent monthly and displays a bar graph to see the difference from month to month</li>
+                        </ul>
+                    <li>Allow logged in users to log out</li>
+
+                
+                <hr>
+
+                <h2>Database Features</h2>
+                    <li>User data</li>
+                        <ul>
+                            <li>Data from previous sessions for users who log in</li>
+                            <li>Data from current session</li>
+                            <li>Record of users who have accounts</li>
+                                <ul>
+                                    <li>Users’ emails</li>
+                                    <li>Users’ name</li>
+                                </ul>
+                        </ul>
+                    <li>Dates</li>
+                        <ul>
+                            <li>Day</li>
+                            <li>Month</li>
+                            <li>Year</li>
+                        </ul>
+                    <li>Catergories</li>
+                        <ul>
+                            <li>Savings</li>
+                            <li>Personal</li>
+                                <ul>
+                                    <li>Food</li>
+                                    <li>Clothes</li>
+                                    <li>Entertainment</li>
+                                    <li>Medical Health</li>
+                                </ul>
+                            <li>Fees</li>
+                                <ul>
+                                    <li>Electricity</li>
+                                    <li>Water</li>
+                                    <li>Internet</li>
+                                    <li>Phone</li>
+                                </ul>
+                            <li>Transportation (Personal car or public transportation</li>
+                            <li>Education</li>
+                            <li>Other</li>
+                        </ul>
+
+            </ul>
+
+            <hr>
+
+            <p> If you'd like to keep up with this project's progress check out my blog periodically for updates. Looking forward get started on this Bugget Web App!</p>
+            
+        
         </div>
 
         <!--  Bootstrap Bundle with Popper -->
