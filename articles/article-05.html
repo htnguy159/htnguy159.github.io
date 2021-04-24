@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <link rel="icon" href="../assets/icon.png">
+        <title>Huong Nguyen</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    </head>
+    <body>
+
+        <div class='container'>
+            <h1 class='display-1 mt-4'> Project Server Design: Budget Web App </h1>
+            <hr>
+        </div>
+
+        <div>
+            <img src='ClientDesign.jpg' style="width:80%;">
+            <h2> Full Stack Web App: Budgeting App </h2>
+            <p> For my current project, I am developing a Budgeting Web App with my teammate, Phuong-Anh. </p>
+
+            <h4> Our goal is to keep track of user expenses and provide monthly reports to show spending habits.</h4>
+
+            <p> This week we focused on the Server Design that this article showcases below. </p>
+
+            <h2> REST API </h2>
+
+            <img src='restAPI.png' style="width:70%;">
+
+            <br>
+            <br>
+
+            <hr>
+
+            <h2> Server Logic </h2>
+
+
+            <ul>
+                <li><h4>Main View (Sign Up View)</h4></li>
+                <p>/api/signUp</p>
+                <ul>
+                    <li>Create session</li>
+                    <li>Server require users to fill out all required user inputs (Sign up form)</li>
+                    <li>Prevent pre-registered emails from re-registration</li>
+                    <li>After signing up, user is redirected to log in view</li>
+                </ul>
+
+                <li><h4>Log In View</h4></li>
+                <p>/api/logIn</p>
+                <ul>
+                    <li>Create session</li>
+                    <li>User authentication</li>
+                    <li>Server require users to fill out all required user inputs (Log in form)</li>
+                    <li>After logging in, user is redirected to general view</li>
+                </ul>
+
+                <li><h4>General View</h4></li>
+                <p>/api/generalView</p>
+                <ul>
+                    <li>When user inputs data, the chart and graphs update</li>
+                    <li>Server require users to fill out all required user inputs (Add expense form)</li>
+                    <li>User stays logged in until they press log out</li>
+
+                </ul>
+
+
+
+            </ul>
+    
+
+            <hr>
+
+            <h2> Server Fetches </h2>
+            
+            <ul>
+                <li>/api/generalView (List, Pie Chart, and Bar Graph): GET, POST for ChartJS to create/update charts</li>
+                <li>/api/signUp & /api/logIn: Express fetches GET request of session id</li>
+            </ul>
+
+            <hr>
+
+            <h2> Tooling & Libs </h2>
+
+            <ul>
+                <li>EJS, Bcrypt, Passport, ChartJS, Express</li>
+            </ul>
+
+            <br>
+
+            <p> If you'd like to keep up with this project's progress check out my blog periodically for updates!</p>
+            
+        
+        </div>
+
+        <!--  Bootstrap Bundle with Popper -->
+        <script src="../scripts/bootstrap.bundle.min.js"></script>
+    </body>
+
+</html>
