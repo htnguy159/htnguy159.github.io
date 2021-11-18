@@ -1,0 +1,114 @@
+<html>
+    <head>
+        <link rel="icon" href="../assets/icon.png">
+        <title>Huong Nguyen</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    </head>
+    <body>
+
+        <div class='container'>
+            <h1 class='display-1 mt-4'> Project Database Design: Budget Web App </h1>
+            <hr>
+        </div>
+
+        <div>
+            <img src='ClientDesign.jpg' style="width:80%;">
+            <h2> Full Stack Web App: Budgeting App </h2>
+            <p> For my current project, I am developing a Budgeting Web App with my teammate, Phuong-Anh. </p>
+
+            <h4> Our goal is to keep track of user expenses and provide monthly reports to show spending habits.</h4>
+
+            <p> This week we focused on the Database Design that includes complete data schemas, all database logic & processing responsibilities, detailed CRUD operations for each data collection, and a list all database tooling and libraries in this article. </p>
+
+            <h2> Schemas </h2>
+
+            <img src='ER_BudgetBuddy.png' style="width:70%;">
+
+            <br>
+            <br>
+
+            <hr>
+
+            <h2> Query Logic </h2>
+
+
+            <ul>
+                <li>Selecting</li>
+                <ul>
+                    <li>Remaining Balance: Take monthly_income (from users table) and subtract all amounts from expenses (from that month, using dates attributes) to show remaining balance</li>
+                    <li>Show Pie Chart: Calculate total amount spent (from expenses) of that month and calculate the percentage of each category from the total amount. </li>
+                    <li>Show Bar Graph: Calculate total amount spent from expenses for each month (from dates stated from Add Expense) to compare past 4 months.</li>
+                </ul>
+                <li>Inserting</li>
+                <ul>
+                    <li>Add user input from Sign Up (email, username, password) to a list of established users (so an email can be registered once).</li>
+                    <li>The user’s input into Add Expense will be used to insert the data into a list.</li>
+                </ul>
+                <li>Filtering</li>
+                <ul>
+                    <li>Filter individual user’s account and input to only show that specific user’s information</li>
+                </ul>
+                <li>Sorting</li>
+                <ul>
+                    <li>User is able to sort the expenses list/chart by description, category, date, or amount</li>
+                </ul>
+
+            </ul>
+    
+
+            <hr>
+
+            <h2> CRUD Operations </h2>
+            
+            <ul>
+                <li>Create</li>
+                <ul>
+                    <li>CREATE TABLE user(email varchar(60) not null, name, password);</li>
+                    <li>Use similar format as above bullet for creations of tables: Expenses, Category, Pie Chart, and Bar Graph</li>
+                </ul>
+                <li>Read</li>
+                <ul>
+                    <li>Show Expense History: select * from Expenses;</li>
+                    <li>Sorted Expense History: select * from Expenses order by amount ASC (or DESC)</li>
+                    <ul>
+                        <li>Similar query for sorting by other categories</li>
+                    </ul>
+                </ul>
+                <li>Update</li>
+                <ul>
+                    <li>Pie Chart, Bar Graph</li>
+                    <ul>
+                        <li>Update chart/graph given new inputs from Add Expense</li>
+                    </ul>
+                </ul>
+                <li>Delete</li>
+                <ul>
+                    <li>DROP TABLE user;</li>
+                    <li>Use similar format as above bullet for creations of tables: Expenses, Category, Pie Chart, and Bar Graph</li>
+                </ul>
+            </ul>
+
+            <hr>
+
+            <h2> Tooling & Libs </h2>
+
+            <ul>
+                <li>MongoDB, MySQL</li>
+            </ul>
+
+            <br>
+
+            <p> If you'd like to keep up with this project's progress check out my blog periodically for updates!</p>
+            
+        
+        </div>
+
+        <!--  Bootstrap Bundle with Popper -->
+        <script src="../scripts/bootstrap.bundle.min.js"></script>
+    </body>
+
+</html>

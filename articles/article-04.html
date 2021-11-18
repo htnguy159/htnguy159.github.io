@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <link rel="icon" href="../assets/icon.png">
+        <title>Huong Nguyen</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    </head>
+    <body>
+
+        <div class='container'>
+            <h1 class='display-1 mt-4'> Project Client Design: Budget Web App </h1>
+            <hr>
+        </div>
+
+        <div>
+            <img src='ClientDesign.jpg' style="width:80%;">
+            <h2> Full Stack Web App: Budgeting App </h2>
+            <p> For my current project, I am developing a Budgeting Web App with my teammate, Phuong-Anh. </p>
+
+            <h4> Our goal is to keep track of user expenses and provide monthly reports to show spending habits.</h4>
+
+            <p> This week we focused on the Client Design that this article showcases below. </p>
+
+            <h2> Mockups</h2>
+            <ul>
+                <li>Main View/Sign up view</li>
+                <ul>
+                    <li>Email, name, password, sign up button</li> 
+                    <img src='Mockup_Main.png'> 
+                </ul>
+                <li>Log in View</li>
+                <ul>
+                    <li>Email, password, log in button</li>
+                    <img src='Mockup_LogIn.png'>
+                </ul>
+                <li>General View </li>
+                <ul>
+                    <li>User Input:</li>
+                    <ul>
+                        <li> Add Income </li>
+                        <img src='Mockup_Income.png'>
+                        <li> Add Expense </li>
+                        <img src='Mockup_Expense.png'> 
+                        <img src='Mockup_Expense2.png'> 
+                    </ul>
+                    <li> Expense History</li>
+                    <img src='Mockup_History.png'>
+                    <li> Remaining Balance</li>
+                    <img src='Mockup_Balance.png'>
+                    <li> Pie Chart</li>
+                    <img src='Mockup_PieChart.png'> 
+                    <li> Bar Graph</li>
+                    <img src='Mockup_BarGraph.png'> 
+                    <li> Log Out Button</li>
+                    <img src='Mockup_LogOut.png'>
+                </ul>
+            </ul>
+
+            <hr>
+
+            <h2> Client Logic </h2>
+
+            <ul>
+                <li><h4>Main View (Sign Up View)</h4></li>
+                <p>Starting point for application - Form for users to register an account</p>
+                <ul>
+                    <li>Inputs: Email, Name, Password</li>
+                    <li>Option Sign Up: Go to logged in General View</li>
+                    <li>Option: Already have an account? Log in: Go to Log In View</li>
+                </ul>
+
+                <li><h4>Log In View</h4></li>
+                <p>User Authentication - Form to access user profile</p>
+                <ul>
+                    <li>Inputs: Email, Password</li>
+                    <li>Option Log In: Go to logged in General View or Alert user of invalid Email/Password</li>
+                </ul>
+
+                <li><h4>General View</h4></li>
+                <p>Header</p>
+                <ul>
+                    <li>Option Log Out: Go to Main View</li>
+                    <li>Inputs: Monthly income, description, category, date, amount</li>
+                    <li>Option 1: Submit (Add expense)</li>
+
+                </ul>
+
+
+
+            </ul>
+    
+
+            <hr>
+
+            <h2> Server Fetches </h2>
+            
+            <ul>
+                <li>Main View: POST and GET request for Sign Up</li>
+                <li>Log In View: POST and GET request for Log In</li>
+                <li>General View: Maybe POST for the graphs</li>
+            </ul>
+
+            <hr>
+
+            <h2> Tooling & Libs </h2>
+
+            <ul>
+                <li>Main View: HTML, CSS, JS, JSON, EJS</li>
+                <li>Log In View: HTML, CSS, JS, JSON, EJS</li>
+                <li>General View: HTML, CSS, JS, ChartJS</li>
+            </ul>
+
+            <br>
+
+            <p> If you'd like to keep up with this project's progress check out my blog periodically for updates!</p>
+            
+        
+        </div>
+
+        <!--  Bootstrap Bundle with Popper -->
+        <script src="../scripts/bootstrap.bundle.min.js"></script>
+    </body>
+
+</html>
